@@ -1,0 +1,46 @@
+T = int(input())
+if (1 <= T <= 400):
+    print("the time allocated in within limits")
+    
+    while True:
+        try:
+    
+            MyList = list(map(int, input().split() ))
+            a=MyList[0]
+            b=(len(MyList)-1)
+            if (a-b==0):
+                print("no of cakes and user input matches")
+                target = int(input())
+                numbers = MyList[1:]
+        
+        
+                def subset_sum(numbers, target, partial=[]):
+                    s = sum(partial)
+            
+                    # check if the partial sum is equals to target
+                    if s == target :
+                        print("yes")
+                        print("sum(%s)=%s" % (partial, target))
+                        
+                    if s >= target:
+                        return# if we reach the number why bother to continue
+
+                    for i in range(len(numbers)):
+                        n = numbers[i]
+                        remaining = numbers[i + 1:]
+                        subset_sum(remaining, target, partial + [n])
+                        
+        
+        
+                if __name__ == "__main__":
+                    subset_sum(numbers,target )
+            
+        
+        
+    
+            else:
+                print("no of input to no of cakes made today does NOT match") 
+        except EOFError:
+            break
+else:
+    print("the time limit is out of constraint")
