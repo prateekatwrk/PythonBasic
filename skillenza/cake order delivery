@@ -1,3 +1,10 @@
+#code is inconplete,till this stage it checks if 
+#    the time allocaed is correct
+#    the number of cake baked in a day is correct with data provided
+#    the target weight permutaion is available in stock of bakery
+# need to impove the code where is only give 1nce yes or no ,if the bakery can deliver the order
+
+
 T = int(input())
 if (1 <= T <= 400):
     print("the time allocated in within limits")
