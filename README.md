@@ -1,2 +1,2 @@
 # PythonBasic
-the data science python basics at acadgild
+the data science python basics
