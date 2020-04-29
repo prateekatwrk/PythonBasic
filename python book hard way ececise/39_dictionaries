@@ -1,0 +1,63 @@
+#create a mapping of states to abbriviation
+states = {
+		'orange' : 'OR',
+		'florida': 'FL',
+		'califirnia':'CA',
+		'new york': 'NY',
+		'michigan': 'MI'
+}
+
+#create a basic set of states and some cities in them
+cities ={
+	'CA':'san francisco',
+	'MI': 'detroit',
+	'FL': 'jacksonville'
+
+}
+
+#add some more cities
+cities['NY'] = 'new york'
+cities['OR'] = 'portland'
+
+#print out some cities
+print('-' * 10)
+print("NY states has : ",cities['NY'])
+print("OR states has : ", cities['OR'])
+
+#print some states
+print('-' * 10)
+print("michigan's abbriviation is :",states['michigan'])
+print("florida's abbriviation is :",states['florida'])
+
+#do it by using the states then cities dict
+print('-' * 10)
+print("michigan has:",cities[states['michigan']])
+print("florida has:",cities[states['florida']])
+
+#print every states abbrevation
+print('-' * 10)
+for state,abbrev in list(states.items()):
+	print(f"{state} is abbrevated {abbrev}")
+
+#print every city in states
+print('-'*10)
+for abbrev,city in list(cities.items()):
+	print(f"{abbrev} has the city{city}")
+
+#now do both at same time
+print('-'*10)
+for state,abbrev in list(states.items()):
+	print(f"{state} is abbrevated {abbrev}")
+	print(f"{abbrev} has the city{city}")
+
+print('-'*10)
+#safely get a abbrivation by states that might not be there
+state = states.get('taxes')
+
+if not state:
+	print("sorry, no taxes")
+
+#get a city with a default value
+city = cities.get('TX','Does Not exist')
+print(f"the city for the sate 'TX' is :{city}")
+

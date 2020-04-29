@@ -1,0 +1,5 @@
+from morePractice25 import break_words
+
+sentence = "All goood  things comes to those who wait"
+words = morePractice25.break_words(sentence)
+words
